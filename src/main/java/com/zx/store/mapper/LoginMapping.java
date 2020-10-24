@@ -9,4 +9,8 @@ public interface LoginMapping {
     public User selectByUsername(String username);
 
     public User selectByEmail(String email);
+
+    public User selectByUsernameAndPassword(String username, String password);
+
+    public User selectByEmailAndPassword(String email, String password);
 }
