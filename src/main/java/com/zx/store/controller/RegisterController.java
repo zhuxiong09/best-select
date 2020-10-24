@@ -28,20 +28,21 @@ public class RegisterController {
 
     @RequestMapping ("/userRegister")
     public String userRegister(@RequestParam String username, @RequestParam String password, @RequestParam String email,
-                               @RequestParam String gender, @RequestParam String phone, Map<String,Object> map,
-                               HttpSession session){
+                               @RequestParam String gender, @RequestParam String phone, Map<String,Object> map){
         System.out.println("username = " + username + ", password = "
                             + password + ", email = " + email + ", gender = " + gender + ", phone = " + phone);
         User user1 = loginMapping.selectByUsername(username);
         User user2 = loginMapping.selectByEmail(email);
-//        System.out.println(user1);
-        if(user1!=null||user2!=null){
-//            map.put("msg","用户名输入错误！");
-            return "register_fail";
-        }else {
+        if(user1!=null){
+            map.put("msg","用户名已存在！");
+            return "register";
+        }else if (user2!=null){
+            map.put("msg1","该邮箱已被绑定！");
+            return "register";
+        } else {
             User user=new User(null,username,password,email,gender,phone);
             registerMapping.insertUser(user);
-            return "register_success";
+            return "login";
         }
     }
 }

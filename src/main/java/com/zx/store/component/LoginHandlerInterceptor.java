@@ -6,9 +6,11 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//登陆检查
 public class LoginHandlerInterceptor implements HandlerInterceptor {
 
     HandlerInterceptor handlerInterceptor = new HandlerInterceptor() {
+        //目标方法执行之前
         @Override
         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
             Object user = request.getSession().getAttribute("loginUser");

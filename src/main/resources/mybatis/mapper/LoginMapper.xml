@@ -13,4 +13,13 @@
         SELECT * FROM user WHERE email=#{email}
     </select>
 
+    <!--    public User selectByUsernameAndPassword(String username, String password);-->
+    <select id="selectByUsernameAndPassword" resultType="com.zx.store.bean.User">
+        SELECT * FROM user WHERE username=#{username} and password=#{password}
+    </select>
+
+    <!--    public User selectByEmailAndPassword(String email, String password);-->
+    <select id="selectByEmailAndPassword" resultType="com.zx.store.bean.User">
+        SELECT * FROM user WHERE email=#{email} and password=#{password}
+    </select>
 </mapper>
