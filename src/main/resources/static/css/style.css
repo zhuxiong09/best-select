@@ -750,7 +750,7 @@ a:hover, a:active { color:#03F; text-decoration:underline; }
 /*  8. Breadcrumbs Area CSS
 /*----------------------------------------*/
 .breadcrumbs-area {
-  background: rgba(0, 0, 0, 0) url("images/breadcrumb.jpg") no-repeat scroll center center;
+  background: rgba(0, 0, 0, 0) url("../../images/breadcrumb.jpg") no-repeat scroll center center;
 }
 .breadcrumbs h3 {
   font-weight: 600;

@@ -176,16 +176,20 @@ NOTE: If you have any note put here.
 /*----------------------------
   Input Plus Minus Button
 ------------------------------ */ 
-    $(".cart-plus-minus-box").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
+    $("#product-detail-color")[0].style.background=blue";
+
+    $(".cart-plus-minus-box1").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
     $(".qtybutton").on("click", function() {
         var $button = $(this);
         var oldValue = $button.parent().find("input").val();
         if ($button.text() == "+") {
             var newVal = parseFloat(oldValue) + 1;
+            console.log("+"+oldValue)
         } else {
             // Don't allow decrementing below zero
             if (oldValue > 0) {
                 var newVal = parseFloat(oldValue) - 1;
+                console.log("-"+oldValue)
             } else {
                 newVal = 0;
             }
