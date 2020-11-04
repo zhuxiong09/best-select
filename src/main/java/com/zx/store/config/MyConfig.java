@@ -11,9 +11,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MyConfig implements WebMvcConfigurer {
 
     @Bean
-    public WebMvcConfigurer webMvcConfigurer(){
+    public WebMvcConfigurer webMvcConfigurer() {
 
-        WebMvcConfigurer adapter= new WebMvcConfigurer() {
+        WebMvcConfigurer adapter = new WebMvcConfigurer() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
                 //视图映射器
@@ -24,7 +24,7 @@ public class MyConfig implements WebMvcConfigurer {
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                        .excludePathPatterns("/login","/userLogin");
+                        .excludePathPatterns("/login", "/userLogin");
             }
         };
         return adapter;

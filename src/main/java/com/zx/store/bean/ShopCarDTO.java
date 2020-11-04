@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ShopCar {
-    private Integer goodsId;
-    private String userName;
-    private String goodsSize;
-    private String goodsColor;
-    private String goodsQuantity;
+public class ShopCarDTO {
+    private String size;
+    private String color;
+    private String quantity;
 }

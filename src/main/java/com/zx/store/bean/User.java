@@ -8,7 +8,8 @@ public class User {
     private String gender;
     private String phone;
 
-    public User() {}
+    public User() {
+    }
 
     public User(Integer id, String username, String password, String email, String gender, String phone) {
         this.id = id;

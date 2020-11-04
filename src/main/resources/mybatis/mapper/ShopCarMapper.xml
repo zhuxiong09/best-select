@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zx.store.mapper.ShopCarMapper">
+
+<!--    public void insertShopCar();-->
+<!--     Integer goodsId,String userName,String goodsSize,String goodsColor,String goodsQuantity-->
+    <insert id="insertShopCar">
+        insert into zx_shopcar(id,goods_id,username,goods_size,goods_color,goods_quantity,created_at,updated_at) values
+        (default,#{goodsId},#{userName},#{goodsSize},#{goodsColor},#{goodsQuantity},default,default);
+    </insert>
+</mapper>

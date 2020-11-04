@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DetailPage {
+public class GoodsDetail {
     private Integer id;
     private double newPrice;
     private double oldPrice;

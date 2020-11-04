@@ -111,7 +111,7 @@
                         <div class="col-sm-7">
                             <div class="product-details-content">
                                 <div class="product-content text-uppercase">
-                                    <a title="Slim Shirt With Stretch" href="details" th:href="@{/details}">[[${detailPage.goodsName}]]</a>
+                                    <a title="Slim Shirt With Stretch" href="details" th:href="@{/details}">[[${goodsDetail.goodsName}]]</a>
                                     <div class="rating-icon pb-30 mt-10">
                                         <i class="zmdi zmdi-star"></i>
                                         <i class="zmdi zmdi-star"></i>
@@ -120,46 +120,47 @@
                                         <i class="zmdi zmdi-star-half"></i>
                                     </div>
                                     <div class="product-price pb-30">
-                                        <span class="new-price">£ [[${detailPage.newPrice}]]</span>
-                                        <span class="old-price">£ [[${detailPage.oldPrice}]]</span>
+                                        <span class="new-price">£ [[${goodsDetail.newPrice}]]</span>
+                                        <span class="old-price">£ [[${goodsDetail.oldPrice}]]</span>
                                     </div>
                                 </div>
                                 <div class="product-view pb-30">
                                     <h4 class="product-details-tilte text-uppercase">overview</h4>
-                                    <p>[[${detailPage.content}]] </p>
+                                    <p>[[${goodsDetail.content}]] </p>
                                 </div>
                                 <div class="product-size text-uppercase pb-40">
                                     <h4 class="product-details-tilte text-uppercase pb-10">size</h4>
                                     <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn btn-info" th:each="size : ${sizes}">
-                                            <input type="radio" class="size" name="size"
+                                        <label class="btn btn-info" th:each="size : ${sizes}" onclick="hideSizeErrorMessage()">
+                                            <input type="radio" class="size" name="product-detail-size"
                                                    th:text="${size.propertyValue}">
                                         </label>
+                                        <lable id="chooseSizeErrorMessage" style="height: 30px;line-height: 30px;color: red;padding: 0 15px; display:none">请选择尺寸</lable>
                                     </div>
-                                    <!--                                    <ul >-->
-                                    <!--                                        <li th:each="size : ${sizes}"><a href="#" name="size" th:text="${size.propertyValue}"></a></li>-->
-                                    <!--                                    </ul>-->
                                 </div>
                                 <div class="product-attributes clearfix">
                                     <div class="product-color text-uppercase pb-40">
                                         <h4 class="product-details-tilte text-uppercase pb-10">color</h4>
-                                        <ul>
-                                            <li class="color-1" th:each="color : ${colors}"><a href="#" id="product-detail-color" th:name="${color.propertyValue}"></a></li>
-<!--                                            <li class="color-2"><a href="#"></a></li>-->
-<!--                                            <li class="color-3"><a href="#"></a></li>-->
-<!--                                            <li class="color-4"><a href="#"></a></li>-->
-                                        </ul>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn" th:each="color : ${colors}"
+                                                   th:style="'background-color:' + ${color.propertyValue}" onclick="hideColorErrorMessage()">
+                                                <input type="radio" class="size" name="product-detail-color" th:color="${color.propertyValue}">
+                                            </label>
+                                            <lable id="chooseColorErrorMessage" style="height: 30px;line-height: 30px;color: red;padding: 0 15px; display:none">请选择颜色</lable>
+                                        </div>
                                     </div>
                                     <div id="quantity-wanted" class="pull-left">
                                         <h4 class="product-details-tilte text-uppercase pb-10">quantity</h4>
-                                        <input type="number" min="0" class="cart-plus-minus-box1" value="1">
+                                        <input type="number" min="1" class="cart-plus-minus-box1" value="1"
+                                               name="product-detail-quantity">
+                                        <lable id="chooseQuantityErrorMessage" style="height: 30px;line-height: 30px;color: red;padding: 0 15px; display:none">数量不能为零！</lable>
                                     </div>
                                 </div>
                                 <div class="product-action-shop text-center mb-40">
                                     <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
                                         <i class="zmdi zmdi-eye"></i>
                                     </a>
-                                    <a title="Add to cart" href="/putInShopCar" th:href="@{/putInShopCar}">
+                                    <a title="Add to cart" id="putIntoCar">
                                         <i class="zmdi zmdi-shopping-cart"></i>
                                     </a>
                                     <a title="Add to Wishlist" href="/wishlist" th:href="@{/wishlist}">
@@ -196,7 +197,7 @@
                             <div class="clearfix"></div>
                             <div class="tab-content review">
                                 <div role="tabpanel" class="tab-pane active" id="description">
-                                    <p>[[${detailPage.summary}]]</p>
+                                    <p>[[${goodsDetail.summary}]]</p>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="reviews">
                                     <table class="table-data-sheet">
@@ -211,7 +212,7 @@
                                         </tr>
                                         <tr class="odd">
                                             <td>Properties</td>
-                                            <td th:text="${detailPage.categoryName}"></td>
+                                            <td th:text="${goodsDetail.categoryName}"></td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -395,20 +396,94 @@
     <!-- End footer area -->
 </div>
 <!-- Body main wrapper end -->
-<script>
-<!--     ..................................................................................   -->
-</script>
 
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!-- jquery latest version -->
-<script src="js/vendor/jquery-3.1.1.min.js" th:src="@{/js/vendor/jquery-3.1.1.min.js}"></script>
+<script th:src="@{/js/vendor/jquery-3.1.1.min.js}"></script>
 <!-- Bootstrap framework js -->
-<script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
 <!-- All js plugins included in this file. -->
-<script src="js/plugins.js" th:src="@{/js/plugins.js}"></script>
+<script th:src="@{/js/plugins.js}"></script>
 <!-- Main js file that contents all jQuery plugins activation. -->
-<script src="js/main.js" th:src="@{/js/main.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+
+<script>
+//隐藏尺寸错误信息
+function hideSizeErrorMessage() {
+    $('#chooseSizeErrorMessage').css('display','none');
+}
+//隐藏颜色错误信息
+function hideColorErrorMessage() {
+    $('#chooseColorErrorMessage').css('display','none');
+}
+$(document).ready(function(){
+  $("#putIntoCar").click(function(){
+        //获取尺寸大小
+        var productDetailSize = $('input[name="product-detail-size"]');
+        var size;
+        for (i=0; i<productDetailSize.length; i++) {
+            if (productDetailSize[i].checked) {
+                size = productDetailSize[i].parentElement.textContent.trim();
+            }
+        }
+        //判断是否选择尺寸
+        if(size === undefined){
+            $('#chooseSizeErrorMessage').css('display','flex');
+            return;
+        }
+
+        //获取颜色信息
+        var productDetailColor = $('input[name="product-detail-color"]');
+        var color;
+        for (i=0; i<productDetailColor.length; i++) {
+            if (productDetailColor[i].checked) {
+                color = $(productDetailColor[i]).attr("color");
+            }
+        }
+        //判断是否选择颜色
+        if(color === undefined){
+            $('#chooseColorErrorMessage').css('display','flex');
+            return;
+        }
+
+        //获取商品数量
+        var quantity;
+        quantity = $("input[name=product-detail-quantity]")[0].value;
+
+        //请求参数
+        var data = {
+            size: size,
+            color: color,
+            quantity: quantity,
+        };
+        console.log(JSON.stringify(data));
+        //
+        $.ajax({
+            //请求方式
+            type : "POST",
+            //请求的媒体类型
+            contentType: "application/json;charset=UTF-8",
+            //请求地址
+            url : "/putInShopCar",
+            //数据，json字符串
+            data : JSON.stringify(data),
+            //请求成功
+            success : function(result) {
+                console.log(result);
+                if(result === "success"){
+                    alert("添加购物车成功！");
+                }
+            },
+            //请求失败，包含具体的错误信息
+            error : function(e){
+                console.log(e.status);
+                console.log(e.responseText);
+            }
+        });
+  });
+});
+</script>
 
 </body>
 
