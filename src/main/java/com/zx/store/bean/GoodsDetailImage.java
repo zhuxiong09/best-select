@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DetailImage {
+public class GoodsDetailImage {
     private Integer id;
     private String link;
     private String position;

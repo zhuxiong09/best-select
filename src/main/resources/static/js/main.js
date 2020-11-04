@@ -176,8 +176,6 @@ NOTE: If you have any note put here.
 /*----------------------------
   Input Plus Minus Button
 ------------------------------ */ 
-    $("#product-detail-color")[0].style.background=blue";
-
     $(".cart-plus-minus-box1").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
     $(".qtybutton").on("click", function() {
         var $button = $(this);

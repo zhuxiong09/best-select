@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zx.store.mapper.PropertyMapper">
+
+    <!--    public Property selectPropertyByGoodsId(Integer id);-->
+    <select id="selectPropertyByGoodsId" resultType="com.zx.store.bean.Property">
+        select N.id id,N.property_name property_name,V.property_value property_value
+        from zx_goods as G
+        INNER join zx_goods_property as P
+        on P.goods_id=G.id
+        INNER join zx_property_name as N
+        on N.id=P.property_name_id
+        INNER join zx_property_value as V
+        on V.id=P.property_value_id
+        where G.id=#{id};
+    </select>
+
+    <!--public List<DetailImage> selectDetailImageByGoodsId(Integer id);    -->
+    <select id="selectGoodsDetailImageByGoodsId" resultType="com.zx.store.bean.GoodsDetailImage">
+        select I.id id,I.link link,I.position position
+        from zx_goods as G
+        INNER join zx_goods_images as I
+        on I.goods_id=G.id
+        where G.id=#{id} and is_master=0;
+    </select>
+
+    <!--    public List<Size> selectSizeByGoodsId(Integer id);-->
+    <select id="selectSizeByGoodsId" resultType="com.zx.store.bean.Size">
+        select N.id,N.property_name,V.property_value
+        from zx_goods as G
+        INNER join zx_goods_property as P
+        on P.goods_id=G.id
+        INNER join zx_property_name as N
+        on N.id=P.property_name_id
+        INNER join zx_property_value as V
+        on V.id=P.property_value_id
+        where G.id=#{id} and N.id=6;
+    </select>
+
+    <!--  public List<Color> selectColorByGoodsId(Integer id);  -->
+    <select id="selectColorByGoodsId" resultType="com.zx.store.bean.Color">
+        select N.id,N.property_name,V.property_value
+        from zx_goods as G
+        INNER join zx_goods_property as P
+        on P.goods_id=G.id
+        INNER join zx_property_name as N
+        on N.id=P.property_name_id
+        INNER join zx_property_value as V
+        on V.id=P.property_value_id
+        where G.id=#{id} and N.id=1;
+    </select>
+
+<!--    public void insertShopcar();-->
+<!--     Integer goodsId,String userName,String goodsSize,String goodsColor,String goodsQuantity-->
+    <insert id="insertShopcar">
+        insert into zx_shopcar(id,goods_id,username,goods_size,goods_color,goods_quantity,created_at,updated_at) values
+        (default,#{goodsId},#{userName},#{goodsSize},#{goodsColor},#{goodsQuantity},default,default);
+    </insert>
+</mapper>
