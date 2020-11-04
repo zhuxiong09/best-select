@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zx.store.mapper.GoodsMapper">
+
+    <!--public List<Goods> selectAllGoods();
+        -->
+    <resultMap id="allGoods" type="com.zx.store.bean.Goods">
+        <id column="id" property="id"></id>
+        <result column="link" property="image"></result>
+        <result column="sale_price" property="newPrice"></result>
+        <result column="price" property="oldPrice"></result>
+    </resultMap>
+    <select id="selectAllGoods" resultMap="allGoods">
+        select B.link,B.goods_id b_g_id,A.id id,A.price sale_price
+        from zx_goods as A left join zx_goods_images as B
+        ON A.id=B.goods_id where B.is_master=1;
+    </select>
+
+    <!-- public ShopCar selectShopCarById(Integer id);-->
+    <!--    private Integer id;
+        private double newPrice;
+        private double oldPrice;
+        private String content;selectShopCarById
+        private String summary;
+        private String brand_name;
+        private String category_name;-->
+    <resultMap id="selectShopCar" type="com.zx.store.bean.GoodsDetail">
+        <id column="id" property="id"></id>
+        <result column="price" property="newPrice"></result>
+        <result column="original" property="oldPrice"></result>
+    </resultMap>
+    <select id="selectGoodsDetailsByGoodsId" resultMap="selectShopCar">
+        select G.id id,G.goods_name, G.price price,G.original original,G.content content,
+        G.summary summary,B.brand_name brand_name,C.category_name category_name
+        from zx_goods as G
+        INNER join zx_brand as B
+        on B.id=G.brand_id
+        INNER join zx_categories as C
+        on C.id=G.category_id
+        where G.id=#{id};
+    </select>
+</mapper>
