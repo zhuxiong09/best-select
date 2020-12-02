@@ -14,7 +14,6 @@ public class Consumer {
     @Autowired
     private AspectService aspectService;
 
-
     @RabbitListener(queues = "TestDirectQueue")//监听的队列名称 TestDirectQueue
     public void process( Message message) {
         Jackson2JsonMessageConverter jackson2JsonMessageConverter = new Jackson2JsonMessageConverter();

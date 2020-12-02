@@ -111,8 +111,6 @@ public class AspectForService {
         long startTime = System.currentTimeMillis();
         log.info("startTime: {}", startTime);
 
-
-
         Object result = pjp.proceed();
 
         //调用完成时间

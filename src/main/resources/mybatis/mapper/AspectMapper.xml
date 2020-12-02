@@ -8,11 +8,3 @@
         INSERT INTO aspect_info(time,start_time,end_time,json_args,json_result,url,clazz_name,method_name) VALUES (#{time},#{startTime},#{endTime},#{jsonArgs},#{jsonResult},#{url},#{clazzName},#{methodName})
     </insert>
 </mapper>
-<!--        //    private long startTime;-->
-<!--        //    private long time;-->
-<!--        //    private JSONArray jsonArgs;-->
-<!--        //    private String url;-->
-<!--        //    private String clazzName;-->
-<!--        //    private String methodName;-->
-<!--        //    private JSONArray jsonResult;-->
-<!--        String clazzName,JSONArray jsonArgs,JSONArray jsonResult,String methodName,long startTime,long time,String url)-->

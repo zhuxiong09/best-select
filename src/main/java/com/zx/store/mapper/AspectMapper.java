@@ -11,16 +11,3 @@ import java.util.Date;
 public interface AspectMapper {
     public void insertAspectInfo(long time, Date startTime,Date endTime, String jsonArgs, String jsonResult, String url, String clazzName, String methodName);
 }
-
-//    private long startTime;
-//    private long time;
-//    private JSONArray jsonArgs;
-//    private String url;
-//    private String clazzName;
-//    private String methodName;
-//    private JSONArray jsonResult;
-//        aspectInfo.getJsonResult(),
-//        aspectInfo.getMethodName(),
-//        aspectInfo.getStartTime(),
-//        aspectInfo.getTime(),
-//        aspectInfo.getUrl());

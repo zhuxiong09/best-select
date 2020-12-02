@@ -1,7 +1,5 @@
 package com.zx.store.bean;
 
-import net.sf.json.JSONArray;
-
 import java.util.Date;
 
 public class AspectInfo {
