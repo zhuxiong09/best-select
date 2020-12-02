@@ -26,11 +26,10 @@ public class IndexController {
     @Autowired
     private GoodsService goodsService;
 
-    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView userLogin(@RequestParam String username, @RequestParam String password,
                                   HttpSession session, Map<String, Object> map) {
         session.setAttribute("loginUser", username);
-
 
         User user1 = userService.selectUserByEmailAndPassword(username, password);
         User user2 = userService.selectUserByUsernameAndPassword(username, password);
