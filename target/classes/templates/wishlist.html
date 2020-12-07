@@ -1,0 +1,169 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wishlist</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}">
+
+    <!-- All css files are included here -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="css/core.css" th:href="@{/css/core.css}">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css" th:href="@{/css/shortcode/shortcodes.css}">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" th:href="@{/css/responsive.css}">
+    <!-- User style -->
+    <link rel="stylesheet" href="css/custom.css" th:href="@{/css/custom.css}">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js" th:href="@{/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Body main wrapper start -->
+<div class="wrapper">
+
+    <!-- Start of header area -->
+    <div th:replace="~{public::header}"></div>
+    <!-- End of header area -->
+    <!-- Start Breadcrumbs Area -->
+    <div class="breadcrumbs-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumbs text-center text-white">
+                        <h3 class="text-uppercase">Wishlist</h3>
+                        <ul class="breadcrumbs-list">
+                            <li>
+                                <a href="index.html" title="Return to Home">Home</a>
+                            </li>
+                            <li>/</li>
+                            <li>Wishlist</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Breadcrumbs Area -->
+    <!-- Start page content -->
+    <section id="page-content" class="page-wrapper">
+        <!-- Start Wishlist Area -->
+        <div class="wishlist-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wishlist-content">
+                            <form action="#">
+                                <div class="wishlist-table table-responsive p-30 text-uppercase">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th class="product-thumbnail"></th>
+                                            <th class="product-name"><span class="nobr">Product</span></th>
+                                            <th class="product-prices"><span class="nobr"> Price </span></th>
+                                            <th class="product-stock-stauts"><span class="nobr"> stock status </span>
+                                            </th>
+                                            <th class="product-add-to-cart"><span class="nobr">Add to Cart </span></th>
+                                            <th class="product-remove"><span class="nobr">Remove</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#" title="men’s black t-shirt"><img
+                                                    src="images/wishlist/1.jpg" alt=""/></a></td>
+                                            <td class="product-name pull-left mt-20">
+                                                <a href="#" title="men’s black t-shirt">men’s black t-shirt</a>
+                                                <p class="w-color m-0">
+                                                    <label> Color :</label>
+                                                    black
+                                                </p>
+                                                <p class="w-size m-0">
+                                                    <label> size :</label>
+                                                    sl
+                                                </p>
+                                            </td>
+                                            <td class="product-prices"><span class="amount">£34.78</span></td>
+                                            <td class="product-stock-status"><span
+                                                    class="wishlist-in-stock">In Stock</span></td>
+                                            <td class="product-add-to-cart">
+                                                <a class="button extra-small" href="#" title="Add to Cart">
+                                                    <span>Add to cart</span>
+                                                </a>
+                                            </td>
+                                            <td class="product-remove"><a href="#">×</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#" title="men’s black t-shirt"><img
+                                                    src="images/wishlist/2.jpg" alt=""/></a></td>
+                                            <td class="product-name pull-left mt-20">
+                                                <a href="#" title="men’s black t-shirt">men’s black t-shirt</a>
+                                                <p class="w-color m-0">
+                                                    <label> Color :</label>
+                                                    black
+                                                </p>
+                                                <p class="w-size m-0">
+                                                    <label> size :</label>
+                                                    sl
+                                                </p>
+                                            </td>
+                                            <td class="product-prices"><span class="amount">£34.78</span></td>
+                                            <td class="product-stock-status"><span
+                                                    class="wishlist-in-stock">In Stock</span></td>
+                                            <td class="product-add-to-cart">
+                                                <a class="button extra-small" href="#" title="Add to Cart">
+                                                    <span>Add to cart</span>
+                                                </a>
+                                            </td>
+                                            <td class="product-remove"><a href="#">×</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Of Wishlist Area -->
+
+    </section>
+    <!-- End page content -->
+    <!-- Start footer area -->
+    <div th:replace="~{public::#footer}"></div>
+    <!-- End footer area -->
+</div>
+<!-- Body main wrapper end -->
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- jquery latest version -->
+<script src="js/vendor/jquery-3.1.1.min.js" th:src="@{/js/vendor/jquery-3.1.1.min.js}"></script>
+<!-- Bootstrap framework js -->
+<script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<!-- All js plugins included in this file. -->
+<script src="js/plugins.js" th:src="@{/js/plugins.js}"></script>
+<!-- Main js file that contents all jQuery plugins activation. -->
+<script src="js/main.js" th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

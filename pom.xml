@@ -84,6 +84,7 @@
             <artifactId>junit</artifactId>
         </dependency>
 
+		<!--实例层注解依赖		-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

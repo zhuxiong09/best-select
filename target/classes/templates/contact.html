@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Contact</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}">
+
+    <!-- All css files are included here -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="css/core.css" th:href="@{/css/core.css}">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css" th:href="@{/css/shortcode/shortcodes.css}">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" th:href="@{/css/responsive.css}">
+    <!-- User style -->
+    <link rel="stylesheet" href="css/custom.css" th:href="@{/css/custom.css}">
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js" th:href="@{/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Body main wrapper start -->
+<div class="wrapper">
+
+    <!-- Start of header area -->
+    <div th:replace="~{public::header}"></div>
+    <!-- End of header area -->
+    <!-- Start Breadcrumbs Area -->
+    <div class="breadcrumbs-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumbs text-center text-white">
+                        <h3 class="text-uppercase">Contact</h3>
+                        <ul class="breadcrumbs-list">
+                            <li>
+                                <a href="index.html" title="Return to Home">Home</a>
+                            </li>
+                            <li>/</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Breadcrumbs Area -->
+    <!-- Start page content -->
+    <section id="page-content" class="page-wrapper">
+        <!-- Map Area Start -->
+        <div class="map-area">
+            <div id="googleMap" style="width:100%;height:600px;"></div>
+        </div>
+        <!-- Map Area End -->
+        <!-- Address Information Area Start -->
+        <div class="address-info-area mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="address-info p-90 clearfix">
+                        <div class="col-md-5 col-sm-6">
+                            <div class="contact-form">
+                                <div class="title text-uppercase mb-15">
+                                    <h4><strong>get in touch</strong></h4>
+                                </div>
+                                <form id="contact-form" action="mail.php" method="post">
+                                    <input type="text" name="name" placeholder="Name*">
+                                    <input type="email" name="email" placeholder="E-mail*">
+                                    <input type="text" name="subject" placeholder="Subject">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                    <button class="submit-btn mt-20" type="submit">submit message</button>
+                                </form>
+                                <p class="form-messege"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-offset-2 col-md-5 col-sm-6">
+                            <div class="contact-address">
+                                <div class="title text-uppercase mb-15">
+                                    <h4><strong>CONTACT FORM</strong></h4>
+                                </div>
+                                <ul class="toggle-footer text-ash p-30">
+                                    <li class="mb-30 pl-45">
+                                        <i class="zmdi zmdi-pin"></i>
+                                        <p>XXX <br>
+                                            XXX</p>
+                                    </li>
+                                    <li class="mb-30 pl-45">
+                                        <i class="zmdi zmdi-email"></i>
+                                        <p>XXX <br>
+                                            XXX</p>
+                                    </li>
+                                    <li class="pl-45">
+                                        <i class="zmdi zmdi-phone"></i>
+                                        <p>XXX<br>
+                                            XXX</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Address Information Area End -->
+
+
+    </section>
+    <!-- End page content -->
+    <!-- Start footer area -->
+    <div th:replace="~{public::#footer}"></div>
+    <!-- End footer area -->
+</div>
+<!-- Body main wrapper end -->
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- jquery latest version -->
+<script src="js/vendor/jquery-3.1.1.min.js" th:src="@{/js/vendor/jquery-3.1.1.min.js}"></script>
+<!-- Bootstrap framework js -->
+<script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<!-- Ajax Mail js -->
+<script src="js/ajax-mail.js" th:src="@{/js/ajax-mail.js}"></script>
+<!-- All js plugins included in this file. -->
+<script src="js/plugins.js" th:src="@{/js/plugins.js}"></script>
+<!-- Google Map js -->
+<script src="https://maps.googleapis.com/maps/api/js" th:src="@{/https://maps.googleapis.com/maps/api/js}"></script>
+<script>
+        function initialize() {
+          var mapOptions = {
+            zoom: 16,
+            scrollwheel: false,
+            center: new google.maps.LatLng(23.763474, 90.431483)
+          };
+          var map = new google.maps.Map(document.getElementById('googleMap'),
+              mapOptions);
+          var marker = new google.maps.Marker({
+            position: map.getCenter(),
+            animation:google.maps.Animation.BOUNCE,
+            icon: 'images/map-icon.png',
+            map: map
+          });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+<!-- Main js file that contents all jQuery plugins activation. -->
+<script src="js/main.js" th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07f403ea-7703-4aa4-93c3-043a21f39f0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/store/aspect/AspectForService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/store/aspect/AspectForService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/store/aspect/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/store/aspect/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zx/store/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zx/store/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\zhuXiong\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\software\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jJ6wGDwRFj8MonjZ9EUFHRLF0r" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\BaiduNetdiskDownload\JavaSource\best-select\src\main\resources\static" />
+      <recent name="D:\BaiduNetdiskDownload\JavaSource\best-select\src\main\resources\style" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zx.store.controller" />
+      <recent name="com.zx.store.mapper" />
+      <recent name="com.zx.store.service" />
+      <recent name="com.zx.store.bean" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\BaiduNetdiskDownload\JavaSource\best-select\src\main\java\com\zx\store\aspect" />
+      <recent name="D:\BaiduNetdiskDownload\JavaSource\best-select\src\main\resources\mybatis\mapper" />
+      <recent name="D:\BaiduNetdiskDownload\JavaSource\best-select\src\main\resources\static\images\product\product-details" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StoreApplication">
+    <configuration name="StoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zx.store.StoreApplication" />
+      <module name="best-select" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zx.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zx.store.StoreApplicationTests" />
+      <module name="best-select" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zx.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreApplicationTests.system" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="best-select" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zx.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zx.store" />
+      <option name="MAIN_CLASS_NAME" value="com.zx.store.StoreApplicationTests" />
+      <option name="METHOD_NAME" value="system" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StoreApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="best-select" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zx.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zx.store" />
+      <option name="MAIN_CLASS_NAME" value="com.zx.store.StoreApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStatic.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="best-select" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zx.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zx.store" />
+      <option name="MAIN_CLASS_NAME" value="com.zx.store.TestStatic" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StoreApplication" />
+        <item itemvalue="JUnit.TestStatic.test" />
+        <item itemvalue="JUnit.StoreApplicationTests.test" />
+        <item itemvalue="JUnit.StoreApplicationTests.system" />
+        <item itemvalue="Application.StoreApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07f403ea-7703-4aa4-93c3-043a21f39f0a" name="Default Changelist" comment="" />
+      <created>1603510084430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603510084430</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1603513293162">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1603513293162" />
+    <state x="514" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606722797622">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="514" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606722797622" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1606832719165">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606832719165" />
+    <state x="544" y="279" width="448" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604479725367">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="544" y="279" width="448" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1604479725367" />
+    <state x="332" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606807553005">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="332" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1606807553005" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606812240709">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606812240709" />
+    <state x="549" y="128" key="FileChooserDialogImpl" timestamp="1606980553132">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="128" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606980553132" />
+    <state width="1493" height="183" key="GridCell.Tab.0.bottom" timestamp="1606982546668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="183" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606982546668" />
+    <state width="1493" height="183" key="GridCell.Tab.0.center" timestamp="1606982546668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="183" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606982546668" />
+    <state width="1493" height="183" key="GridCell.Tab.0.left" timestamp="1606982546668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="183" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606982546668" />
+    <state width="1493" height="183" key="GridCell.Tab.0.right" timestamp="1606982546668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="183" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606982546668" />
+    <state width="1493" height="291" key="GridCell.Tab.1.bottom" timestamp="1606837050084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="291" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606837050084" />
+    <state width="1493" height="291" key="GridCell.Tab.1.center" timestamp="1606837050084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="291" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606837050084" />
+    <state width="1493" height="291" key="GridCell.Tab.1.left" timestamp="1606837050084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="291" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606837050084" />
+    <state width="1493" height="291" key="GridCell.Tab.1.right" timestamp="1606837050084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="291" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606837050084" />
+    <state x="367" y="109" key="IDE.errors.dialog" timestamp="1603513580705">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="367" y="109" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1603513580705" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1606786811550">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1606786811550" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1606828629022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606828629022" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1604485908739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1604485908739" />
+    <state x="360" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606832708848">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606832708848" />
+    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606872273667">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606872273667" />
+    <state x="354" y="76" width="979" height="688" key="find.popup" timestamp="1606830235391">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="354" y="76" width="979" height="688" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606830235391" />
+    <state x="342" y="73" width="1194" height="678" key="new project wizard" timestamp="1606965031249">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="342" y="73" width="1194" height="678" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1606965031249" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1603856443458">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603856443458" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606830246840">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606830246840" />
+  </component>
+</project>
