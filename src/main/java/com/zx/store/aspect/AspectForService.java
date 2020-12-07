@@ -123,6 +123,7 @@ public class AspectForService {
         log.info("consumeTime: "+ time);
 
         System.out.println("..........result:"+ result);
+        //将result转换成字符串格式
         JSONArray jsonResult0 = JSONArray.fromObject(result);
         String jsonResult = jsonResult0.toString();
         System.out.println("..........JSONresult:"+ jsonResult);

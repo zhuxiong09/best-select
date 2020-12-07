@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zx.store.mapper.AspectMapper">
+    <!--    public AspectInfo insertAspectInfo();-->
+    <insert id="insertAspectInfo">
+        INSERT INTO aspect_info(time,start_time,end_time,json_args,json_result,url,clazz_name,method_name) VALUES (#{time},#{startTime},#{endTime},#{jsonArgs},#{jsonResult},#{url},#{clazzName},#{methodName})
+    </insert>
+</mapper>

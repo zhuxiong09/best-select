@@ -3,6 +3,9 @@ package com.zx.store.aspect;
 
 import com.zx.store.bean.AspectInfo;
 import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.Exchange;
+import org.springframework.amqp.rabbit.annotation.Queue;
+import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +24,15 @@ public class Consumer {
         aspectService.insertAspectInfo(aspectInfo);
     }
 
+//    @RabbitListener(bindings = {
+//            @QueueBinding(
+//                    value = @Queue,
+//                    exchange = @Exchange(value = "TestDirectQueue",type = "direct"),
+//                    key = {"TestDirectQueue"}
+//            )
+//    })
+//    public void process1( Message message) {
+//        System.out.println("message = " + message);
+//    }
 }
 

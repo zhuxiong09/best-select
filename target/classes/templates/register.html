@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login / Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}">
+
+    <!-- All css files are included here -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="css/core.css" th:href="@{/css/core.css}">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css" th:href="@{/css/shortcode/shortcodes.css}">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="style.css" th:href="@{/css/style.css}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" th:href="@{/css/responsive.css}">
+    <!-- User style -->
+    <link rel="stylesheet" href="css/custom.css" th:href="@{/css/custom.css}">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js" th:href="@{/js/vendor/modernizr-2.8.3.min.js}"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Body main wrapper start -->
+<div class="wrapper">
+
+    <!-- Start of header area -->
+    <div th:replace="~{public::header}"></div>
+    <!-- End of header area -->
+
+    <!-- Start page content -->
+    <section id="page-content" class="page-wrapper">
+        <!-- Start Wishlist Area -->
+        <div class="login-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="registered-customers">
+                            <div class="section-title text-uppercase mb-40">
+                                <h4>NEW CUSTOMERS</h4>
+                            </div>
+                            <form action="/userRegister" method="post">
+                                <div class="login-account p-30 box-shadow">
+                                    <!--判断用户名是否已经存在-->
+                                    <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+                                    <input type="text" name="username" placeholder="username">
+                                    <!--判断邮箱是否已经存在-->
+                                    <p style="color: red" th:text="${msg1}" th:if="${not #strings.isEmpty(msg1)}"></p>
+                                    <input type="text" name="email" placeholder="Email address here...">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <select class="custom-select" name="gender">
+                                                <option value="defalt">gender</option>
+                                                <option value="male">male</option>
+                                                <option value="femal">femal</option>
+                                                <option value="secret">secret</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="phone" placeholder="Phone here..."
+                                                   style="height: 45px;">
+                                        </div>
+                                    </div>
+                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="password" name="rePassWord" placeholder="Confirm Password">
+                                    <div class="checkbox">
+                                        <label class="mr-10">
+                                            <small>
+                                                <input type="checkbox" name="signup">Sign up for our newsletter!
+                                            </small>
+                                        </label>
+                                        <label>
+                                            <small>
+                                                <input type="checkbox" name="signup">Receive special offers from our
+                                                partners!
+                                            </small>
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button value="register" type="submit" class="submit-btn mt-20"
+                                                    style="padding:0 93px">Register
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="reset" class="submit-btn mt-20" style="padding:0 93px">Clear
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Of Wishlist Area -->
+    </section>
+    <!-- End page content -->
+    <!-- Start footer area -->
+    <footer id="footer" class="footer-area">
+        <div class="footer-top-area gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-widget">
+                            <div class="footer-widget-img pb-30">
+                                <a href="#">
+                                    <img src="images/logo/logo-2.png" alt="">
+                                </a>
+                            </div>
+                            <ul class="toggle-footer text-white">
+                                <li class="mb-30 pl-45">
+                                    <i class="zmdi zmdi-pin"></i>
+                                    <p>XXX <br>
+                                        XXX</p>
+                                </li>
+                                <li class="mb-30 pl-45">
+                                    <i class="zmdi zmdi-email"></i>
+                                    <p>XXX <br>
+                                        XXX</p>
+                                </li>
+                                <li class="pl-45">
+                                    <i class="zmdi zmdi-phone"></i>
+                                    <p>XXX<br>
+                                        XXX</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="text-white footer-information">
+                            <h4 class="pb-40 m-0 text-uppercase">information</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Hot Sale</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>best Seller</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Suppliers</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Our Store</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Deal of The Day</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="text-white footer-account">
+                            <h4 class="pb-40 m-0 text-uppercase">MY ACCOUNT</h4>
+                            <ul class="footer-menu">
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>My Account</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Personal Information</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Discount</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Orders History</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i>Payment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="text-white footer-about-us">
+                            <h4 class="pb-40 m-0 text-uppercase">about us</h4>
+                            <p>Lorem ipsum dolor sit amet, consecteir our adipisicing elit, sed do eiusmod tempor the
+                                incididunt ut labore et dolore magnaa liqua. Ut enim minimn.</p>
+                            <ul class="footer-social-icon">
+                                <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-rss"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom black-bg ptb-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="copyright text-white">
+                            <p>Copyright &copy; 2020.Company name All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-img">
+                            <img src="images/payment.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer area -->
+</div>
+<!-- Body main wrapper end -->
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- jquery latest version -->
+<script src="js/vendor/jquery-3.1.1.min.js" th:src="@{/js/vendor/jquery-3.1.1.min.js}"></script>
+<!-- Bootstrap framework js -->
+<script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<!-- All js plugins included in this file. -->
+<script src="js/plugins.js" th:src="@{/js/plugins.js}"></script>
+<!-- Main js file that contents all jQuery plugins activation. -->
+<script src="js/main.js" th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

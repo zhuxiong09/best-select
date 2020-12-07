@@ -42,6 +42,7 @@ public class RabbitConfig {
         return new DirectExchange("lonelyDirectExchange");
     }
 
+    //自定义MessageConverter
     @Bean
     public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
         RabbitTemplate template = new RabbitTemplate(connectionFactory);
